@@ -1,21 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'
+import { Container, Text } from 'native-base'
+import PlaidAuthenticator from 'react-native-plaid-link'
+import { StyleSheet } from 'react-native'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Container>
+      <Container>
+        <PlaidAuthenticator
+          onMessage={console.log}
+          publicKey="d027c32082e6626f6fcf209d39510d"
+          env="sandbox"
+          product="auth,transactions"
+          clientName="Block Coin"
+          selectAccount={false}
+        />
+      </Container>
+    </Container>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  link: {
+    marginTop: 599,
+  }
+})
+
