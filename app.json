@@ -1,0 +1,12 @@
+{
+  "name": "BlockCoin",
+  "displayName": "BlockCoin",
+  "expo": {
+    "name": "BlockCoin",
+    "slug": "BlockCoin",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
